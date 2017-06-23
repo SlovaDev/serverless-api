@@ -52,3 +52,12 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-1:265577941307:userpool/us-east-1_wEgHGaO2X
+  list:
+    handler: list.main
+    events:
+      - http:
+          path: words
+          method: get
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-1:265577941307:userpool/us-east-1_wEgHGaO2X
