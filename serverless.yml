@@ -70,3 +70,12 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-1:265577941307:userpool/us-east-1_wEgHGaO2X
+  delete:
+    handler: delete.main
+    events:
+      - http:
+          path: words/{id}
+          method: delete
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-1:265577941307:userpool/us-east-1_wEgHGaO2X
